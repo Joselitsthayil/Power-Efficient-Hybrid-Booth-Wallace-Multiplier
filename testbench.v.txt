@@ -1,0 +1,29 @@
+`timescale 1ns/1ps 
+module tb_booth_wallace8_trunc2; 
+reg  signed [7:0] A; 
+reg  signed [7:0] B; 
+wire signed [15:0] P; 
+booth_wallace8_trunc2 DUT (.A(A), .B(B), .P(P)); 
+task check_and_report; 
+begin 
+$display("[%0t]  A=%0d  B=%0d  => DUT=%0d  REF=%0d", $time, A, B, P, A*B); 
+end  
+endtask 
+initial begin 
+A =  8'sd10;   B =  8'sd5;   #10; check_and_report; 
+A = -8'sd7;    B =  8'sd11;  #10; check_and_report; 
+A =  8'sd100;  B = -8'sd50;  #10; check_and_report; 
+A = -8'sd128;  B = -8'sd128; #10; check_and_report; 
+A =  8'sd5;    B =  8'sd0;   #10; check_and_report; 
+A = -8'sd1;    B = -8'sd7;   #10; check_and_report; 
+A =  8'sd7;    B = -8'sd7;   #10; check_and_report; 
+A = -8'sd7;    B =  8'sd7;   #10; check_and_report; 
+A =  8'sd12;   B = -8'sd12;  #10; check_and_report; 
+A = -8'sd64;   B =  8'sd3;   #10; check_and_report; 
+A =  8'sd127;  B =  8'sd127; #10; check_and_report; 
+A =  8'sd100;  B = -8'sd50;  #10; check_and_report; 
+check_and_report; 
+#10; 
+$finish; 
+end 
+endmodule 
