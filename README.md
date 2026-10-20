@@ -1,4 +1,4 @@
-# Power-Efficient-Hybrid-Booth-Wallace-Multiplier
+
 # Power-Efficient Hybrid Booth–Wallace Multiplier
 
 ## Project Overview
