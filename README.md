@@ -114,46 +114,6 @@ The report compares the proposed design against a reference Booth multiplier rep
 | Cell area | 1246.614 µm² | 539.44 µm² |
 | Architecture | Truncated hybrid Booth–Wallace | Optimized Booth multiplier |
 
-The report gives the following relative power reduction:
-
-$$
-\text{Power Reduction}
-=
-\frac{P_{\mathrm{ref}}-P_{\mathrm{prop}}}
-{P_{\mathrm{ref}}}
-\times100\%
-$$
-
-Using the reported power values:
-
-$$
-\text{Power Reduction}
-=
-\frac{1.07-0.05229}{1.07}
-\times100\%
-\approx95.11\%
-$$
-
-The corresponding area increase is:
-
-$$
-\text{Area Increase}
-=
-\frac{A_{\mathrm{prop}}-A_{\mathrm{ref}}}
-{A_{\mathrm{ref}}}
-\times100\%
-$$
-
-$$
-\text{Area Increase}
-=
-\frac{1246.614-539.44}{539.44}
-\times100\%
-\approx131.1\%
-$$
-
-**Comparison note:** These figures are those reported in the project report. Because the designs use different technology nodes and may use different synthesis conditions, the percentages should be interpreted as a reported cross-design comparison rather than a controlled, same-technology benchmark.
-
 ## Key Findings
 
 - Radix-4 Booth encoding reduces the number of partial products compared with radix-2 multiplication.
